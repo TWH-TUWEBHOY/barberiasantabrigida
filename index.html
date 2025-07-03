@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La barberia</title>
+  <style>
+    .contrataciones{
+        border-radius: 20px;
+        background-color: hsl(0, 100%, 50%);
+        padding: 33px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        right: 38%;
+        left: 38%;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      width: 100%;
+      background-color: #e2e2e2;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 200px;
+      margin-right: 100px;
+    }
+
+    .title {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: hsl(197, 87%, 50%);
+      position: absolute;
+      left: 12%;
+    }
+
+    .contacto {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1em;
+      margin-left: auto;
+      position: absolute;
+      left: 80%;
+    }
+
+    .logo-whatsapp {
+      width: 70px;
+      height: 70px;
+    }
+
+    main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .servicios {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .servicio {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 20px;
+    }
+
+    .servicio img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .servicio p {
+      margin-top: 10px;
+      font-size: 1em;
+    }
+
+    .videos {
+      padding: 40px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .videos h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .video-galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .video-item {
+      width: 320px;
+      max-width: 100%;
+    }
+
+    .video-item iframe {
+      width: 100%;
+      height: 180px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .video-item p {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #555;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .redes {
+      margin-top: 10px;
+    }
+
+    .redes a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .img-redes {
+      width: 5%;
+      height: 10%;
+    }
+
+    #texto-rebotando {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5em;
+      font-weight: bold;
+      color: crimson;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px 20px;
+      border-radius: 10px;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    contrato{
+        text-decoration: none;
+        list-style: none;
+    }
+
+    @media (max-width: 768px) {
+      *{
+        margin: 0 auto;
+        padding: 0;
+      }
+      body{
+        padding: 0 auto;
+      }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .logo-container {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container img {
+    justify-content: center;
+    height: 120px;
+    margin: 0;
+  }
+
+  .title {
+    justify-content: center;
+    position: static;
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+
+  .contacto {
+    position: static;
+    margin-top: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contrataciones {
+    margin: 0 auto;
+    justify-content: center;
+    position: static;
+    width: 50%;
+    text-align: center;
+  }
+
+  .servicios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicio {
+    width: 90%;
+  }
+
+  .video-galeria {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .video-item {
+    width: 90%;
+  }
+
+  .img-redes {
+    width: 30px;
+    height: auto;
+  }
+
+  .contacto strong {
+    font-size: 1em;
+  }
+  .logo-whatsapp{
+    padding: 0;
+    margin: 0;
+  }
+  .numero{
+    padding: 0;
+    margin: 0;
+  }
+  .img-redes{
+    width: 25%;
+  }
+  footer{
+    width: 100%;
+  } 
+
+}
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="img/barberia.png" alt="Logo del negocio">
+      <div class="title">BARBERIA SANTA BRIGIDA</div>
+    </div>
+    <div class="contrataciones"><a class="contrato" href="https://wa.me/5491127140002?text=Hola%20estoy%20interazada/o%20en%20adquirir%20la%20promocion" target="_blank">
+  <strong >CLICK AQUI PARA CONTRATARNOS</strong>
+</a>
+</div>
+    <div class="contacto">
+      <img class="logo-whatsapp" src="img/Whatsapp.png" alt=""> <strong class="numero">(123) 456-7890</strong>
+    </div>
+  </header>
+
+  <main>
+    <h1>¿Qué hacemos?</h1>
+    <div class="servicios">
+      <div class="servicio">
+        <img src="img/barberia1.png" alt="Corte clásico">
+        <p>Corte clásico con estilo profesional.</p>
+      </div>
+      <div class="servicio">
+        <img src="img/barberia2.png" alt="Barba y afeitado">
+        <p>Afeitado con toalla caliente y cuidado de barba.</p>
+      </div>
+      <div class="servicio">
+        <img src="img/barberia3.png" alt="Estilo moderno">
+        <p>Estilos modernos y personalizados para vos.</p>
+      </div>
+    </div>
+  </main>
+
+  <section class="videos">
+    <h2>Nuestros Videos</h2>
+    <div class="video-galeria">
+      <div class="video-item">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HiNYwW2pTVQ?si=YEA4l-mfcE0gio9d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Corte clásico paso a paso</p>
+      </div>
+      <div class="video-item">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lrrbwH8VSKw?si=CEYY5kdWV_bTFGe0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Cómo cuidar tu barba en casa</p>
+      </div>
+      <div class="video-item">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GYV785xAALw?si=Yq1nWWoE_FT4_EcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>Estilos modernos para 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Barbería Santa Brígida. Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="https://www.facebook.com/profile.php?id=tu_identificador_numérico"><img class="img-redes" src="img/Facebook.png" alt=""></a>
+      <a href="https://www.instagram.com"><img class="img-redes" src="img/instagram.png" alt=""></a>
+      <a href="https://www.youtube.com/"><img class="img-redes" src="img/Youtube.png" alt=""></a>
+    </div>
+  </footer>
+
+</body>
+</html>
